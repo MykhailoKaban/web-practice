@@ -1,4 +1,7 @@
-/* Змінні кольорів точно по макету */
+/* ===========================
+   MOBILE FIRST — базові стилі для мобільних
+   =========================== */
+
 :root {
     --bg-main: #141414;
     --bg-card: #1A1A1A;
@@ -35,11 +38,12 @@ ul {
 .top-bar {
     background-color: var(--bg-card);
     text-align: center;
-    padding: 12px;
-    font-size: 0.85rem;
+    padding: 10px 16px;
+    font-size: 0.8rem;
     color: var(--text-muted);
     border-bottom: 1px solid var(--border-color);
 }
+
 .accent-arrow {
     color: var(--accent-yellow);
     margin-left: 5px;
@@ -51,165 +55,582 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 80px;
+    padding: 16px 20px;
     border-bottom: 1px solid var(--border-color);
+    position: relative;
 }
+
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 1.4rem;
+    gap: 8px;
+    font-size: 1.2rem;
     font-weight: 600;
+    z-index: 100;
 }
-.logo-icon { color: var(--accent-yellow); font-size: 1.8rem; }
+
+.logo-icon {
+    color: var(--accent-yellow);
+    font-size: 1.5rem;
+}
+
+/* Burger кнопка — видима тільки на мобільних */
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    padding: 0;
+}
+
+.burger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text-main);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Анімація burger → хрестик */
+.burger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Навігація — прихована на мобільних */
+.main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 99;
+}
+
+.main-nav.open {
+    display: block;
+}
+
 .main-nav ul {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
 }
-.main-nav a { color: var(--text-muted); font-size: 0.95rem; }
-.main-nav a.active, .main-nav a:hover { color: var(--text-main); }
+
+.main-nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    color: var(--text-main);
+}
+
+/* Contact Us — прихована на мобільних */
+.contact-btn {
+    display: none;
+}
+
 .btn-yellow {
     background-color: var(--accent-yellow);
     color: var(--bg-main);
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 6px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
-/* === HERO SECTION === */
+/* === HERO === */
 .hero {
     display: flex;
-    padding: 80px;
+    flex-direction: column;
+    padding: 40px 20px;
     border-bottom: 1px solid var(--border-color);
-    gap: 60px;
+    gap: 40px;
 }
+
 .hero-left {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
+
 .subtitle {
     color: var(--text-muted);
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.15;
     margin-bottom: 20px;
 }
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 500;
-    line-height: 1.1;
-    margin-bottom: 24px;
-}
+
 .description {
     color: var(--text-muted);
-    font-size: 1rem;
-    margin-bottom: 50px;
-    max-width: 90%;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
 }
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding-top: 40px;
+    gap: 10px;
+    padding-top: 24px;
     border-top: 1px solid var(--border-color);
 }
-.stat-item h2 { font-size: 2.5rem; font-weight: 500; margin-bottom: 5px;}
-.stat-item p { color: var(--text-muted); font-size: 0.9rem; }
-.accent-color { color: var(--accent-yellow); }
+
+.stat-item h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.stat-item p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.accent-color {
+    color: var(--accent-yellow);
+}
 
 .hero-right {
-    flex: 1;
     background-image: radial-gradient(circle at top right, #2a2a2a 0%, var(--bg-main) 70%);
     border-radius: 12px;
-    position: relative;
-    min-height: 500px;
+    min-height: 280px;
     display: flex;
     align-items: flex-end;
 }
+
 .floating-card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
-    margin: 40px;
-    width: 80%;
+    margin: 20px;
+    width: calc(100% - 40px);
 }
-.avatars { display: flex; margin-bottom: 20px; }
-.avatar { border-radius: 50%; border: 2px solid var(--bg-card); margin-left: -10px; }
-.avatar:first-child { margin-left: 0; }
-.floating-card h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 10px; }
-.floating-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
-.btn-outline { border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 6px; color: var(--text-muted); font-size: 0.9rem; display: inline-block;}
+
+.avatars {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 2px solid var(--bg-card);
+    margin-left: -10px;
+    width: 36px;
+    height: 36px;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}
+
+.floating-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.floating-card p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+}
+
+.btn-outline {
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    display: inline-block;
+}
 
 /* === INFO CARDS === */
 .info-cards {
     display: flex;
+    flex-direction: column;
     border-bottom: 1px solid var(--border-color);
 }
+
 .info-card {
-    flex: 1;
-    padding: 50px 80px;
-    border-right: 1px solid var(--border-color);
+    padding: 30px 20px;
+    border-bottom: 1px solid var(--border-color);
 }
-.info-card:last-child { border-right: none; }
+
+.info-card:last-child {
+    border-bottom: none;
+}
+
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
-.card-icon { font-size: 2.5rem; color: var(--accent-yellow); }
-.arrow-icon { width: 40px; height: 40px; background-color: var(--accent-yellow); color: var(--bg-main); display: flex; justify-content: center; align-items: center; border-radius: 50%; font-weight: bold; font-size: 1.2rem; cursor: pointer; }
-.info-card h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 10px; }
-.card-tag { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 30px; }
-.card-desc { color: var(--text-muted); font-size: 0.95rem; }
 
-/* === FEATURES SECTION === */
-.features {
-    padding: 100px 80px;
+.card-icon {
+    font-size: 2rem;
+    color: var(--accent-yellow);
 }
+
+.arrow-icon {
+    width: 36px;
+    height: 36px;
+    background-color: var(--accent-yellow);
+    color: var(--bg-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.card-tag {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.card-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* === FEATURES === */
+.features {
+    padding: 50px 20px;
+}
+
 .badge {
     background-color: var(--bg-card);
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 6px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-main);
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     border: 1px solid var(--border-color);
 }
-.features-header h2 { font-size: 2.8rem; font-weight: 500; margin-bottom: 60px; }
+
+.features-header h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
 
 .features-container {
     display: flex;
+    flex-direction: column;
     border-top: 1px solid var(--border-color);
 }
+
 .features-sidebar {
-    flex: 1;
-    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
 }
+
 .feature-large {
-    padding: 50px 40px 50px 0;
+    padding: 30px 0;
     border-bottom: 1px solid var(--border-color);
 }
-.feature-large:last-child { border-bottom: none; }
-.icon-large { font-size: 2.5rem; color: var(--accent-yellow); margin-bottom: 30px; }
-.feature-large h3 { font-size: 1.4rem; font-weight: 500; margin-bottom: 15px; }
-.feature-large p { color: var(--text-muted); font-size: 0.95rem; }
+
+.feature-large:last-child {
+    border-bottom: none;
+}
+
+.icon-large {
+    font-size: 2rem;
+    color: var(--accent-yellow);
+    margin-bottom: 20px;
+}
+
+.feature-large h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.feature-large p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
 
 .features-grid {
-    flex: 2;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 40px 0 0 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 30px 0 0;
 }
+
 .feature-small {
     background-color: var(--bg-card);
-    padding: 40px;
+    padding: 24px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
 }
-.feature-small h4 { font-size: 1.1rem; font-weight: 500; margin-bottom: 15px; }
-.feature-small p { color: var(--text-muted); font-size: 0.9rem; }
+
+.feature-small h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.feature-small p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* ===========================
+   481px — Планшети (iPad, Tablet)
+   =========================== */
+@media (min-width: 481px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .info-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .info-card {
+        flex: 1 1 50%;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .info-card:nth-child(2) {
+        border-right: none;
+    }
+
+    .info-card:nth-child(3) {
+        flex: 1 1 100%;
+        border-bottom: none;
+        border-top: 1px solid var(--border-color);
+    }
+}
+
+/* ===========================
+   769px — Малі екрани, ноутбуки
+   =========================== */
+@media (min-width: 769px) {
+    .header {
+        padding: 20px 40px;
+    }
+
+    /* Показуємо звичайне меню, ховаємо burger */
+    .burger {
+        display: none;
+    }
+
+    .contact-btn {
+        display: inline-block;
+    }
+
+    .main-nav {
+        display: block;
+        position: static;
+        background: none;
+        border: none;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .main-nav ul li a {
+        padding: 0;
+        border: none;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        flex-direction: row;
+        padding: 60px 40px;
+        gap: 40px;
+    }
+
+    .hero-left {
+        flex: 1;
+    }
+
+    .hero-right {
+        flex: 1;
+        min-height: 380px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .stat-item h2 {
+        font-size: 2rem;
+    }
+
+    .info-cards {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .info-card {
+        flex: 1;
+        padding: 40px 30px;
+        border-right: 1px solid var(--border-color);
+        border-bottom: none;
+    }
+
+    .info-card:last-child {
+        border-right: none;
+    }
+
+    .info-card:nth-child(3) {
+        flex: 1;
+        border-top: none;
+    }
+
+    .features {
+        padding: 70px 40px;
+    }
+
+    .features-header h2 {
+        font-size: 2.4rem;
+    }
+
+    .features-container {
+        flex-direction: row;
+    }
+
+    .features-sidebar {
+        flex: 1;
+        border-right: 1px solid var(--border-color);
+        padding-right: 30px;
+    }
+
+    .features-grid {
+        flex: 2;
+        padding: 30px 0 0 30px;
+    }
+}
+
+/* ===========================
+   1025px — Десктопи, великі екрани
+   =========================== */
+@media (min-width: 1025px) {
+    .header {
+        padding: 24px 80px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .logo-icon {
+        font-size: 1.8rem;
+    }
+
+    .main-nav ul {
+        gap: 40px;
+    }
+
+    .hero {
+        padding: 80px;
+        gap: 60px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-right {
+        min-height: 500px;
+    }
+
+    .floating-card {
+        width: 80%;
+        padding: 30px;
+        margin: 40px;
+    }
+
+    .stat-item h2 {
+        font-size: 2.5rem;
+    }
+
+    .info-card {
+        padding: 50px 80px;
+    }
+
+    .features {
+        padding: 100px 80px;
+    }
+
+    .features-header h2 {
+        font-size: 2.8rem;
+        margin-bottom: 60px;
+    }
+
+    .features-sidebar {
+        padding-right: 0;
+    }
+
+    .feature-large {
+        padding: 50px 40px 50px 0;
+    }
+
+    .features-grid {
+        padding: 40px 0 0 40px;
+        gap: 20px;
+    }
+
+    .feature-small {
+        padding: 40px;
+    }
+}
+
+/* ===========================
+   1201px — Extra large, TV
+   =========================== */
+@media (min-width: 1201px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .stat-item h2 {
+        font-size: 3rem;
+    }
+
+    .features-header h2 {
+        font-size: 3.2rem;
+    }
+}
