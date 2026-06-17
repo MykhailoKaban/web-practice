@@ -1,4 +1,14 @@
-/* Базові налаштування (Reset) */
+/* Змінні кольорів точно по макету */
+:root {
+    --bg-main: #141414;
+    --bg-card: #1A1A1A;
+    --bg-card-hover: #222222;
+    --border-color: #262626;
+    --text-main: #FFFFFF;
+    --text-muted: #98989A;
+    --accent-yellow: #FFD11A;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,169 +16,200 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0b0f19; /* Темний фон з макета */
-    color: #ffffff;
-    line-height: 1.6;
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.5;
 }
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--text-main);
 }
 
 ul {
     list-style: none;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+/* === TOP BAR === */
+.top-bar {
+    background-color: var(--bg-card);
+    text-align: center;
+    padding: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
 }
-
-/* Кнопки */
-.btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.accent-arrow {
+    color: var(--accent-yellow);
+    margin-left: 5px;
     font-weight: bold;
 }
 
-.btn-primary {
-    background-color: #fbd029; /* Жовтий колір з макета */
-    color: #0b0f19;
-}
-
-.btn-contact {
-    background-color: transparent;
-    border: 1px solid #333;
-    color: #fff;
-}
-
-/* Шапка (Header) */
+/* === HEADER === */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    border-bottom: 1px solid #222;
+    padding: 24px 80px;
+    border-bottom: 1px solid var(--border-color);
 }
-
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
-
-.logo img {
-    height: 30px;
-}
-
+.logo-icon { color: var(--accent-yellow); font-size: 1.8rem; }
 .main-nav ul {
     display: flex;
-    gap: 20px;
+    gap: 40px;
+}
+.main-nav a { color: var(--text-muted); font-size: 0.95rem; }
+.main-nav a.active, .main-nav a:hover { color: var(--text-main); }
+.btn-yellow {
+    background-color: var(--accent-yellow);
+    color: var(--bg-main);
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
-.main-nav a.active, .main-nav a:hover {
-    color: #fbd029;
-}
-
-/* Головна секція (Hero) */
+/* === HERO SECTION === */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: radial-gradient(circle, rgba(25,30,45,1) 0%, rgba(11,15,25,1) 100%);
+    display: flex;
+    padding: 80px;
+    border-bottom: 1px solid var(--border-color);
+    gap: 60px;
 }
-
-.hero .badge {
-    color: #a0a0a0;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.hero h1 {
-    font-size: 3rem;
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
-
-.hero p {
-    color: #a0a0a0;
-    margin-bottom: 30px;
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 24px;
 }
-
-/* Секція зі статтями */
-.blog-posts {
-    padding: 50px 5%;
+.description {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 50px;
+    max-width: 90%;
 }
-
-.blog-posts h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
 }
+.stat-item h2 { font-size: 2.5rem; font-weight: 500; margin-bottom: 5px;}
+.stat-item p { color: var(--text-muted); font-size: 0.9rem; }
+.accent-color { color: var(--accent-yellow); }
 
-.post-grid {
+.hero-right {
+    flex: 1;
+    background-image: radial-gradient(circle at top right, #2a2a2a 0%, var(--bg-main) 70%);
+    border-radius: 12px;
+    position: relative;
+    min-height: 500px;
     display: flex;
-    gap: 30px;
+    align-items: flex-end;
 }
-
-.post-card {
-    background-color: #111520;
-    border: 1px solid #222;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 50%;
+.floating-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px;
+    width: 80%;
 }
+.avatars { display: flex; margin-bottom: 20px; }
+.avatar { border-radius: 50%; border: 2px solid var(--bg-card); margin-left: -10px; }
+.avatar:first-child { margin-left: 0; }
+.floating-card h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 10px; }
+.floating-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
+.btn-outline { border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 6px; color: var(--text-muted); font-size: 0.9rem; display: inline-block;}
 
-.post-info {
-    padding: 20px;
+/* === INFO CARDS === */
+.info-cards {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
 }
-
-.post-info h3 {
-    margin-bottom: 10px;
+.info-card {
+    flex: 1;
+    padding: 50px 80px;
+    border-right: 1px solid var(--border-color);
 }
-
-.post-info p {
-    color: #a0a0a0;
-    margin-bottom: 15px;
-}
-
-.read-more {
-    color: #fbd029;
-    font-weight: bold;
-}
-
-/* Підвал (Footer) */
-.footer {
-    padding: 50px 5% 20px;
-    border-top: 1px solid #222;
-    margin-top: 50px;
-}
-
-.footer-content {
+.info-card:last-child { border-right: none; }
+.card-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    align-items: center;
+    margin-bottom: 40px;
 }
+.card-icon { font-size: 2.5rem; color: var(--accent-yellow); }
+.arrow-icon { width: 40px; height: 40px; background-color: var(--accent-yellow); color: var(--bg-main); display: flex; justify-content: center; align-items: center; border-radius: 50%; font-weight: bold; font-size: 1.2rem; cursor: pointer; }
+.info-card h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 10px; }
+.card-tag { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 30px; }
+.card-desc { color: var(--text-muted); font-size: 0.95rem; }
 
-.footer-logo p {
-    color: #a0a0a0;
-    margin-top: 10px;
+/* === FEATURES SECTION === */
+.features {
+    padding: 100px 80px;
 }
+.badge {
+    background-color: var(--bg-card);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+.features-header h2 { font-size: 2.8rem; font-weight: 500; margin-bottom: 60px; }
 
-.footer-links ul {
+.features-container {
     display: flex;
-    gap: 20px;
+    border-top: 1px solid var(--border-color);
 }
+.features-sidebar {
+    flex: 1;
+    border-right: 1px solid var(--border-color);
+}
+.feature-large {
+    padding: 50px 40px 50px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.feature-large:last-child { border-bottom: none; }
+.icon-large { font-size: 2.5rem; color: var(--accent-yellow); margin-bottom: 30px; }
+.feature-large h3 { font-size: 1.4rem; font-weight: 500; margin-bottom: 15px; }
+.feature-large p { color: var(--text-muted); font-size: 0.95rem; }
 
-.footer-bottom {
-    text-align: center;
-    color: #a0a0a0;
-    font-size: 0.9rem;
-    border-top: 1px solid #222;
-    padding-top: 20px;
+.features-grid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px 0 0 40px;
 }
+.feature-small {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+.feature-small h4 { font-size: 1.1rem; font-weight: 500; margin-bottom: 15px; }
+.feature-small p { color: var(--text-muted); font-size: 0.9rem; }
