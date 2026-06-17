@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+    <!-- TOP BAR -->
     <div class="top-bar">
-        <p>Subscribe to our Newsletter For New & latest Blogs and Resources <span class="accent-arrow">↗</span></p>
+        <p>Subscribe to our Newsletter For New &amp; latest Blogs and Resources <span class="accent-arrow">↗</span></p>
     </div>
 
-    <header class="header">
+    <!-- HEADER -->
+    <header class="header" id="header">
         <div class="logo">
             <span class="logo-icon">❖</span> FutureTech
         </div>
@@ -32,12 +35,13 @@
     </header>
 
     <main>
+
+        <!-- HERO -->
         <section class="hero">
             <div class="hero-left">
                 <span class="subtitle">Your Journey to Tomorrow Begins Here</span>
                 <h1>Explore the Frontiers of Artificial Intelligence</h1>
                 <p class="description">Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI.</p>
-                
                 <div class="stats-grid">
                     <div class="stat-item">
                         <h2>300<span class="accent-color">+</span></h2>
@@ -53,23 +57,21 @@
                     </div>
                 </div>
             </div>
-            
             <div class="hero-right">
-                <div class="hero-graphic">
-                    <div class="floating-card">
-                        <div class="avatars">
-                            <img src="https://via.placeholder.com/40" alt="User 1" class="avatar">
-                            <img src="https://via.placeholder.com/40" alt="User 2" class="avatar">
-                            <img src="https://via.placeholder.com/40" alt="User 3" class="avatar">
-                        </div>
-                        <h3>Explore 1000+ resources</h3>
-                        <p>Over 1,000 articles on emerging tech trends and breakthroughs.</p>
-                        <a href="#" class="btn-outline">Explore Resources ↗</a>
+                <div class="floating-card">
+                    <div class="avatars">
+                        <div class="avatar-placeholder"></div>
+                        <div class="avatar-placeholder"></div>
+                        <div class="avatar-placeholder"></div>
                     </div>
+                    <h3>Explore 1000+ resources</h3>
+                    <p>Over 1,000 articles on emerging tech trends and breakthroughs.</p>
+                    <a href="#" class="btn-outline">Explore Resources ↗</a>
                 </div>
             </div>
         </section>
 
+        <!-- INFO CARDS -->
         <section class="info-cards">
             <div class="info-card">
                 <div class="card-header">
@@ -100,12 +102,12 @@
             </div>
         </section>
 
+        <!-- FEATURES -->
         <section class="features">
             <div class="features-header">
                 <span class="badge">Unlock the Power of</span>
                 <h2>FutureTech Features</h2>
             </div>
-
             <div class="features-container">
                 <div class="features-sidebar">
                     <div class="feature-large">
@@ -119,7 +121,6 @@
                         <p>Dive deep into future technology concepts with our research section.</p>
                     </div>
                 </div>
-
                 <div class="features-grid">
                     <div class="feature-small">
                         <h4>Quantity</h4>
@@ -145,10 +146,361 @@
                         <h4>Graphics</h4>
                         <p>Visual aids and infographics to enhance comprehension.</p>
                     </div>
+                    <div class="feature-small">
+                        <h4>Trends</h4>
+                        <p>Coverage of the latest trends in future technology fields.</p>
+                    </div>
+                    <div class="feature-small">
+                        <h4>Contributors</h4>
+                        <p>Contributions from leading researchers and industry experts.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- BLOG POSTS -->
+        <section class="blog-section">
+            <div class="blog-header">
+                <span class="badge">A Knowledge Transfer Place</span>
+                <div class="blog-title-row">
+                    <h2>Explore FutureTech's In-Depth Blog Posts</h2>
+                    <a href="#" class="view-all">View All Blogs ↗</a>
+                </div>
+            </div>
+
+            <div class="blog-tabs">
+                <button class="tab-btn active" data-tab="all">AI</button>
+                <button class="tab-btn" data-tab="quantum">Quantum Computing</button>
+                <button class="tab-btn" data-tab="ethics">AI Ethics</button>
+                <button class="tab-btn" data-tab="space">Space Exploration</button>
+                <button class="tab-btn" data-tab="bitcoin">Bitcoin</button>
+                <button class="tab-btn" data-tab="renewable">Renewable Energy</button>
+            </div>
+
+            <div class="blog-list">
+                <article class="blog-card">
+                    <div class="blog-card-left">
+                        <div class="author-info">
+                            <div class="author-avatar"></div>
+                            <div>
+                                <p class="author-name">John Thomson</p>
+                                <p class="author-role">Quantum Researcher</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card-right">
+                        <p class="blog-date">October 10, 2023</p>
+                        <h3 class="blog-title">The Quantum Leap in Computing</h3>
+                        <p class="blog-excerpt">Quantum computers are not just a faster version of our current computers; they operate on principles of quantum mechanics, promising unprecedented computational power.</p>
+                        <div class="blog-footer">
+                            <div class="blog-tags">
+                                <span class="tag">24</span>
+                                <span class="tag">12</span>
+                                <span class="tag">36</span>
+                            </div>
+                            <a href="#" class="read-btn">Read Blog ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-left">
+                        <div class="author-info">
+                            <div class="author-avatar"></div>
+                            <div>
+                                <p class="author-name">Sarah Whitzel</p>
+                                <p class="author-role">AI Ethics</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card-right">
+                        <p class="blog-date">November 5, 2023</p>
+                        <h3 class="blog-title">The Ethical Dilemmas of AI</h3>
+                        <p class="blog-excerpt">As artificial intelligence becomes increasingly integrated into our daily lives, it brings with it a host of ethical questions that society must grapple with.</p>
+                        <div class="blog-footer">
+                            <div class="blog-tags">
+                                <span class="tag">18</span>
+                                <span class="tag">9</span>
+                                <span class="tag">27</span>
+                            </div>
+                            <a href="#" class="read-btn">Read Blog ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-left">
+                        <div class="author-info">
+                            <div class="author-avatar"></div>
+                            <div>
+                                <p class="author-name">Astronomer X</p>
+                                <p class="author-role">Space Scientist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card-right">
+                        <p class="blog-date">December 12, 2023</p>
+                        <h3 class="blog-title">The Mars Colonization Challenge</h3>
+                        <p class="blog-excerpt">The prospect of humans living on Mars has moved from science fiction to the realm of serious scientific discussion, with multiple space agencies and private companies setting their sights on the Red Planet.</p>
+                        <div class="blog-footer">
+                            <div class="blog-tags">
+                                <span class="tag">31</span>
+                                <span class="tag">15</span>
+                                <span class="tag">46</span>
+                            </div>
+                            <a href="#" class="read-btn">Read Blog ↗</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- RESOURCES -->
+        <section class="resources-section">
+            <div class="resources-header">
+                <span class="badge">Your Gateway to In-Depth Information</span>
+                <div class="resources-title-row">
+                    <h2>Unlock Valuable Knowledge with FutureTech's Resources</h2>
+                    <a href="#" class="view-all">View All Resources ↗</a>
+                </div>
+            </div>
+
+            <div class="resources-container">
+                <div class="resource-item">
+                    <div class="resource-info">
+                        <div class="resource-icon">📙</div>
+                        <h3>Ebooks</h3>
+                        <p>Dive into a collection of ebooks covering a wide spectrum of future technology topics.</p>
+                        <a href="#" class="btn-outline">Download Ebook Now ↗</a>
+                        <div class="resource-stats">
+                            <span>10k+ <span class="stat-label">Downloads</span></span>
+                            <div class="mini-avatars">
+                                <div class="mini-avatar"></div>
+                                <div class="mini-avatar"></div>
+                                <div class="mini-avatar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-cards">
+                        <div class="resource-card featured">
+                            <div class="resource-card-label">Variety of Topics</div>
+                            <p>Topics include AI, robotics, climate change (SDG), healthcare (SDG), and more — over 100 different topics.</p>
+                            <div class="resource-card-footer">
+                                <span>Over 700 ebooks</span>
+                                <span class="tag-pill">PDF format for access</span>
+                                <span class="tag-pill accent">Finance ↗</span>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-card-label">Unique Authors</div>
+                            <p>Ebooks are authored by renowned experts with an average of 10 years of experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-item">
+                    <div class="resource-info">
+                        <div class="resource-icon">📄</div>
+                        <h3>Whitepapers</h3>
+                        <p>One-stop shop for quality whitepapers and resources with our educational whitepapers.</p>
+                        <a href="#" class="btn-outline">Download Whitepapers Now ↗</a>
+                        <div class="resource-stats">
+                            <span>10k+ <span class="stat-label">Users</span></span>
+                            <div class="mini-avatars">
+                                <div class="mini-avatar"></div>
+                                <div class="mini-avatar"></div>
+                                <div class="mini-avatar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-cards">
+                        <div class="resource-card featured">
+                            <div class="resource-card-label">Topics Coverage</div>
+                            <p>Whitepapers encompass a wide range of topics including AI (machine learning, NLP, computer vision), cybersecurity, blockchain, and more.</p>
+                            <div class="resource-card-footer">
+                                <span>Over 50 whitepapers</span>
+                                <span class="tag-pill">PDF format for access</span>
+                                <span class="tag-pill accent">Finance ↗</span>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-card-label">Unique Authors</div>
+                            <p>Whitepapers are authored by subject matter experts with an average of 20 years of experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials">
+            <div class="testimonials-header">
+                <span class="badge">What Our Readers Say</span>
+                <div class="testimonials-title-row">
+                    <h2>Real Words from Real Readers</h2>
+                    <a href="#" class="view-all">View All Testimonials ↗</a>
+                </div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The articles on AI in healthcare have been a game-changer for my research. They offer in-depth insights and case studies that are invaluable for staying updated."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar small"></div>
+                        <div>
+                            <p class="author-name">Sarah Thompson</p>
+                            <p class="author-role">Medical Researcher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The focus on renewable energy technology is exactly what I needed. They offer detailed data and analysis, helping our team stay ahead in sustainable innovations."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar small"></div>
+                        <div>
+                            <p class="author-name">Raj Patel</p>
+                            <p class="author-role">Energy Analyst</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"As a student of AI, I find the blog posts to be an excellent resource. They highlight the latest innovations and best practices, improving public discourse."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar small"></div>
+                        <div>
+                            <p class="author-name">Emily Adams</p>
+                            <p class="author-role">AI Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The reports on space in this publication have consistently provided the latest research data and insights into NASA's plans, which are invaluable for staying updated."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar small"></div>
+                        <div>
+                            <p class="author-name">Alan Jackson</p>
+                            <p class="author-role">Space Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The support in e-gaming is groundbreaking. Deep articles on the future of gaming. It motivates me to push the boundaries of my expertise in graphics."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar small"></div>
+                        <div>
+                            <p class="author-name">Jessica Miller</p>
+                            <p class="author-role">Game Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"FutureTech has been an invaluable resource for all things AI. The blog posts are insightful, helping me stay current and informed on all things AI."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar small"></div>
+                        <div>
+                            <p class="author-name">Diego Lopez</p>
+                            <p class="author-role">Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="cta-icon">↻</div>
+            <span class="badge">Learn, Connect, and Innovate</span>
+            <h2>Be Part of the Future Tech Revolution</h2>
+            <p>Join a community of forward-thinkers, innovators, and tech enthusiasts. Explore the latest AI developments, connect with industry experts, and shape the future of technology.</p>
+            <div class="cta-cards">
+                <div class="cta-card">
+                    <div class="cta-card-icon">📚</div>
+                    <h4>Resource Access</h4>
+                    <p>Gain access to a vast library of resources, including ebooks, whitepapers, and research papers.</p>
+                </div>
+                <div class="cta-card">
+                    <div class="cta-card-icon">💬</div>
+                    <h4>Community Forum</h4>
+                    <p>Join our vibrant community forum to discuss ideas, share insights, and collaborate on projects.</p>
+                </div>
+                <div class="cta-card">
+                    <div class="cta-card-icon">🎯</div>
+                    <h4>Tech Events</h4>
+                    <p>Stay updated on upcoming tech events, webinars, and conferences to network with industry leaders.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">❖</span> FutureTech
+                </div>
+                <p>Empowering the future with AI insights.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">𝕏</a>
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">f</a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>News</h4>
+                    <ul>
+                        <li><a href="#">Latest</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Blogs</h4>
+                    <ul>
+                        <li><a href="#">AI</a></li>
+                        <li><a href="#">Quantum</a></li>
+                        <li><a href="#">Space</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Podcasts</h4>
+                    <ul>
+                        <li><a href="#">Episodes</a></li>
+                        <li><a href="#">Guests</a></li>
+                        <li><a href="#">Subscribe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Ebooks</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Research</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Terms of Service</p>
+            <p>Privacy Policy</p>
+            <p>© 2026 FutureTech. Всі права захищено.</p>
+        </div>
+    </footer>
 
     <script src="assets/js/main.js"></script>
 </body>
