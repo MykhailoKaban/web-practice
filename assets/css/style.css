@@ -10,9 +10,6 @@
     --accent-yellow: #FFD11A;
 }
 
-/* ===========================
-   RESET & BASE — mobile first
-   =========================== */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
